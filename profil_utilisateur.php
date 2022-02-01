@@ -9,6 +9,7 @@
 <body>
  <center><h1>profil utilisateur</h1></center>
 <a href="Accueil.php"><input type="button"value="Accueil"/></a>
+<center><a href="questions.php"><input type="button"value="FAQ"/></a></center>
 <div align="right"><a href="déconnexion.php"><input type="button"value="se deconnecter"/></a></div>
 <center><TABLE>
 <TR>
