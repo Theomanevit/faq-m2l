@@ -7,10 +7,10 @@
     <title>profil utilisateur</title>
 </head>
 <body>
-    <h1>profil uttilisateur</h1>
+ <center><h1>profil utilisateur</h1></center>
 <a href="Accueil.php"><input type="button"value="Accueil"/></a>
-<a href="déconnexion.php"><input type="button"value="se deconnecter"/></a>
-<TABLE>
+<div align="right"><a href="déconnexion.php"><input type="button"value="se deconnecter"/></a></div>
+<center><TABLE>
 <TR>
 <TD>pseudo</TD>
 <TD>user name</TD>
@@ -27,6 +27,6 @@
 <TD>ligue</TD>
 <TD>ligue name</TD>
 </TR>
-</TABLE>
+</TABLE></center>
 </body>
 </html>
