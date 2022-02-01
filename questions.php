@@ -16,7 +16,7 @@
 
 
 
-<a href="accueil2.php">Accueil</a><a href="ajout_question.php">ajouter une question</a></div><br/>
+<a href="accueil2.php">Accueil</a>
 <a href="accueil.php"><img src="img/log_out.png" alt="log_out"/></a>
 <a href="ajout_question.php"><img src="img/ajout_question.png" alt="ajout_question"/></a>
 <h1>Foire aux questions</h1>
