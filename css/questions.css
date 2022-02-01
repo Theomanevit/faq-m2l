@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* Template CSS */
+
+table, th, td {
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 0);
+  border-collapse: separate;
+  border-radius: 14px;
+
+}
+
+body {
+  margin-left:20px;
+}
+
+th,td {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size : 14px;
+  width:150px;
+  padding: 5px;
+  text-align:center;
+}
+
+th {
+   background-color: grey;
+   color: white; 
+}
+
+td {
+   background-color: white; 
+   color: black;
+}
+.bord{
+    background-color:grey;
+}
+img{
+    max-height:50px;
+    max-width: 50px;
+}

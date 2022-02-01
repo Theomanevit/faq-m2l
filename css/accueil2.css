@@ -1,0 +1,38 @@
+img {
+    max-height: 30px;
+    max-width: 30px;
+}
+
+div {
+    background-image:url(../img/fond_accueil.jpg);
+    height: 500px;    
+}
+
+table, th, td {
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    border-collapse: collapse;
+  }
+   
+  body {
+    margin-left:20px;
+  }
+   
+  th,td {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size : 14px;
+    width:150px;
+    padding: 5px;
+    text-align:center;
+  }
+   
+  th {
+     background-color: grey;
+     color: white;
+  }
+   
+  td {
+     background-color: white;
+     color: black;
+  }
