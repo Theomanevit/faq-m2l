@@ -18,6 +18,9 @@ body {
   margin-left:20px;
 }
 
+h1{
+  font-size: 42px;
+}
 th,td {
   font-family: Verdana, Geneva, sans-serif;
   font-size : 14px;
@@ -38,10 +41,45 @@ td {
 .bord{
     background-color:grey;
 }
+
 img{
-    max-height:50px;
-    max-width: 50px;
+    max-height:100px;
+    max-width: 100px;
 }
-.droite{
+
+.image{
+  max-height: 50px;
+  max-width: 50px;
+}
+
+.trash{
+  max-height: 35px;
+  max-width: 35px;
+}
+
+.edit{
+  max-height: 35px;
+  max-width: 35px;
+}
+
+.ajout{
   float: right;
+  max-height:75px;
+  max-width: 75px;
+  padding: 5px;
+}
+
+.logout{
+  float: right;
+  padding: 5px;
+  max-height: 50px;
+  max-width: 50px;
+}
+
+.tableaucentre{
+  margin: auto;
+}
+textarea{
+  width: 450px;
+  height: 150px;
 }
