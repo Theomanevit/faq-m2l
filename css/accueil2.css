@@ -1,11 +1,12 @@
 img {
     max-height: 30px;
     max-width: 30px;
+    align-items: right;
 }
 
 div {
-    background-image:url(../img/fond_accueil.jpg);
-    height: 500px;    
+  background-image:url(../img/fond_sport_acceuil.jpg);
+  height: 900px;    
 }
 
 table, th, td {
@@ -17,6 +18,7 @@ table, th, td {
    
   body {
     margin-left:20px;
+    background-color: black;
   }
    
   th,td {
@@ -36,3 +38,29 @@ table, th, td {
      background-color: white;
      color: black;
   }
+
+  h2{
+    font-size : 50px;
+    margin:auto;
+  }
+
+  form{
+    text-align: right;
+    white-space: nowrap;
+}
+
+h1{
+  color: white;
+  font-size : 150px;
+  text-align: center;
+  margin:auto;
+  line-height:10cm;
+}
+
+.droite{
+  float: right;
+  border-style:groove;
+  border-width: 3px;
+  border-color: white;
+  color: white;
+}

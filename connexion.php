@@ -4,15 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>accueil</title>
+    <title>connextion</title>
     <link rel="stylesheet" href="css/accueil.css">
 </head>
 <body>
-    <h3>Accueil</h3>
-    <form action="connexion.php" method="post">
-        <input type="submit" value="Connextion" />
-        <input type="submit" value="inscription" />
-    </form>
+    <h2>Connexion</h2> <br>
     <div>
     <h1>
         M2l
@@ -25,8 +21,10 @@
     <input type="text" name="mot de passe" value="mot de passe"/>
     </form></td></tr>
     </table>
-    <form action="connexion.php">
+    <form action="accueil.php">
         <input type="submit" value="annuler" />
+    </form>
+    <form action="accueil2.php">
         <input type="submit" value="valider" />
     </form>
     </div>

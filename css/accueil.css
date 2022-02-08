@@ -8,10 +8,12 @@ table, th, td {
     border-width: 1px;
     border-color: black;
     border-collapse: collapse;
+    margin:auto;
   }
    
   body {
     margin-left:20px;
+    background-color: black;
   }
    
   th,td {
@@ -32,16 +34,39 @@ table, th, td {
      color: black;
   }
 
-form{
-    text-align: right;
-}
-
-label{
-  text-align: left;
+.droite{
+  float: right;
+  border-style:groove;
+  border-width: 3px;
+  border-color: white;
+  color: white;
 }
 
 h1{
   color: white;
-  
+  font-size : 150px;
+  text-align: center;
+  margin:auto;
+  line-height:10cm;
 }
+
+a{
+  font-size : 50px;
+}
+
+.accueil{
+  color:white;
+}
+
+input,select{
+  font-size: 25px;
+}
+
+form{
+  text-align: center;
+  white-space: nowrap;
+}
+
+
   
+
