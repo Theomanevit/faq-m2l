@@ -1,6 +1,6 @@
 div {
     background-image:url(../img/fond_sport_acceuil.jpg);
-    height: 1000px;    
+    height: 900px;    
 }
 
 table, th, td {
@@ -31,4 +31,17 @@ table, th, td {
      background-color: white;
      color: black;
   }
+
+form{
+    text-align: right;
+}
+
+label{
+  text-align: left;
+}
+
+h1{
+  color: white;
+  
+}
   
