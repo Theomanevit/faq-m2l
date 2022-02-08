@@ -1,11 +1,12 @@
 img {
     max-height: 30px;
     max-width: 30px;
+    align-items: right;
 }
 
 div {
-    background-image:url(../img/fond_accueil.jpg);
-    height: 500px;    
+  background-image:url(../img/fond_sport_acceuil.jpg);
+  height: 900px;    
 }
 
 table, th, td {
@@ -36,3 +37,14 @@ table, th, td {
      background-color: white;
      color: black;
   }
+
+  h2{
+    font-size : 50px;
+    margin:auto;
+  }
+
+  form{
+    text-align: right;
+    white-space: nowrap;
+}
+  

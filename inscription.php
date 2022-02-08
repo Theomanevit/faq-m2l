@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>accueil</title>
+    <title>inscription</title>
     <link rel="stylesheet" href="css/accueil.css">
 </head>
 <body>
-    <h3>Accueil</h3>
-    <form action="inscription.php" method="post">
-        <input type="submit" value="Connextion" />
-        <input type="submit" value="inscription" />
-    </form>
+    <header>
+        <nav>
+            <a class="accueil">
+                Inscription
+            </a>
+        </nav>
+    </header> 
+
     <div>
-    <h1>
-        M2l
-    </h1>
+    <h1>M2l</h1>
     <table>
         <tr><td><form action="inscription.php" method="post">
     <input type="text" name="pseudo" value="pseudo"/>
