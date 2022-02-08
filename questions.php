@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,21 +8,38 @@
     <link rel="stylesheet" href="css/questions.css">
     <title>Liste des questions</title>
 </head>
+
 <body>
-
-<a href="accueil2.php"><img src="img/home.png" alt="accueil"/></a>
-<a href="ajout_question.php"><img src="img/ajout_question.png" alt="ajout_question"/></a>
-<a href="accueil.php"><img src="img/log_out.png" alt="log_out"/></a>
-
-<h1>Foire aux questions</h1>
-
-<table>   
-<td element class="bord"><table>
-       <tr><td><p>question</p></td></tr>
-        <tr><td><p>Réponse</p></td></tr>
-</table><a href="modif_question.php"><img src="img/edit.png" alt="edit"/></a><a href="suppr_question.php"><img src="img/trash.png" alt="trash"/></a></td>
-</table>
+    <div>
+        <h1><a href="accueil2.php"><img class="image" src="img/home.png" alt="accueil" /></a>
+            Foire aux questions
+            <a href="accueil.php"><img class="logout" src="img/log_out.png" alt="log_out" /></a>
+            <a href="ajout_question.php"><img class="ajout" src="img/ajout_question.png" alt="ajout_question" /></a>
+        </h1>
 
 
+        <table>
+            <td element class="bord">
+                <table>
+                    <tr>
+                        <td>
+                            <p>question</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Réponse</p>
+                        </td>
+                    </tr>
+                </table><a href="modif_question.php"><img class="edit" src="img/edit.png" alt="edit" /></a><a href="suppr_question.php"><img class="trash" src="img/trash.png" alt="trash" /></a>
+            </td>
+        </table>
+
+    </div>
+    <?php
+    /*$message="Test";
+echo '<script type="text/javascript">window.alert("'.$message.'");</script>';*/
+    ?>
 </body>
+
 </html>
