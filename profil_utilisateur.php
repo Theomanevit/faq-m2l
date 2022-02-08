@@ -9,8 +9,9 @@
 </head>
 <body>
  <center><h1>profil utilisateur</h1></center>
-<a href="Accueil.php"><input type="button"value="Accueil"/></a><center><a href="questions.php"><input type="button"value="FAQ"/></a></center><div align="right"><a href="déconnexion.php"><input type="button"value="se deconnecter"/></a></div>
-<center><table>
+<a href="Accueil.php"><input type="button"value="Accueil"/></a><center><a href="questions.php"><input type="button"value="FAQ"/></a></center><div align="right"><a href="déconnexion.php"><input type="button"value="se deconnecter"/></a>
+<center><table>   
+<td element class="bord"><table>
 <tr>
 <td>pseudo</td>
 <td>user name</td>
@@ -27,6 +28,7 @@
 <td>ligue</td>
 <td>ligue name</td>
 </tr>
+</table>
 </table></center>
 </body>
 </html>
