@@ -17,6 +17,10 @@ table, tr, td {
   background-color:grey;
 }
 
+h1{
+  color: rgb(255, 255, 255);
+  font-size: 75px;
+}
 
 tr,td {
   font-family: Verdana, Geneva, sans-serif;
