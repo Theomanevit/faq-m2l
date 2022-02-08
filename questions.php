@@ -8,12 +8,12 @@
     <title>Liste des questions</title>
 </head>
 <body>
+<div>
+<h1><a href="accueil2.php"><img src="img/home.png" alt="accueil"/></a>
+Foire aux questions
+<a class="droite" href="accueil.php"><img src="img/log_out.png" alt="log_out"/></a>
+<a class="droite" href="ajout_question.php"><img src="img/ajout_question.png" alt="ajout_question"/></a>
 
-<a href="accueil2.php"><img src="img/home.png" alt="accueil"/></a>
-<a href="ajout_question.php"><img src="img/ajout_question.png" alt="ajout_question"/></a>
-<a href="accueil.php"><img src="img/log_out.png" alt="log_out"/></a>
-
-<h1>Foire aux questions</h1>
 
 <table>   
 <td element class="bord"><table>
@@ -21,7 +21,10 @@
         <tr><td><p>Réponse</p></td></tr>
 </table><a href="modif_question.php"><img src="img/edit.png" alt="edit"/></a><a href="suppr_question.php"><img src="img/trash.png" alt="trash"/></a></td>
 </table>
-<table></table>
-
+</div>
+<?php
+/*$message="Test";
+echo '<script type="text/javascript">window.alert("'.$message.'");</script>';*/
+?>
 </body>
 </html>

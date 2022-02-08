@@ -1,5 +1,9 @@
 @charset "utf-8";
 /* Template CSS */
+div {
+  background-image:url(../img/fond_pro.jpg);
+  height: 900px;    
+}
 
 table, th, td {
   border-style: solid;
@@ -37,4 +41,7 @@ td {
 img{
     max-height:50px;
     max-width: 50px;
+}
+.droite{
+  float: right;
 }
