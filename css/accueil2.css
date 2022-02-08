@@ -18,6 +18,7 @@ table, th, td {
    
   body {
     margin-left:20px;
+    background-color: black;
   }
    
   th,td {
@@ -47,4 +48,19 @@ table, th, td {
     text-align: right;
     white-space: nowrap;
 }
-  
+
+h1{
+  color: white;
+  font-size : 150px;
+  text-align: center;
+  margin:auto;
+  line-height:10cm;
+}
+
+.droite{
+  float: right;
+  border-style:groove;
+  border-width: 3px;
+  border-color: white;
+  color: white;
+}
