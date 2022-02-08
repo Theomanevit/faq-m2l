@@ -17,13 +17,12 @@
             <a href="ajout_question.php"><img class="ajout" src="img/ajout_question.png" alt="ajout_question" /></a>
         </h1>
 
-
-        <table>
+        <table class="tableaucentre">
             <td element class="bord">
                 <table>
                     <tr>
                         <td>
-                            <p>question</p>
+                            <p>Question</p>
                         </td>
                     </tr>
                     <tr>
@@ -33,6 +32,8 @@
                     </tr>
                 </table><a href="modif_question.php"><img class="edit" src="img/edit.png" alt="edit" /></a><a href="suppr_question.php"><img class="trash" src="img/trash.png" alt="trash" /></a>
             </td>
+        </table>
+        </table>
         </table>
 
     </div>
