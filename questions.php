@@ -30,7 +30,7 @@
                             <p>Réponse</p>
                         </td>
                     </tr>
-                </table><a href="modif_question.php"><img class="edit" src="img/edit.png" alt="edit" /></a><a href="suppr_question.php"><img class="trash" src="img/trash.png" alt="trash" /></a>
+                </table><a href="modif_question.php"><img class="edit" src="img/edit.png" alt="edit" /></a><a href="suppression_question.php"><img class="trash" src="img/trash.png" alt="trash" /></a>
             </td>
         </table>
         </table>
