@@ -37,9 +37,11 @@
     </select>
     </form></td></tr>
     </table>
-    <form action="inscription.php">
-        <input type="submit" value="annuler" />
+    <form action="accueil2.php">
         <input type="submit" value="valider" />
+    </form>
+    <form action="accueil.php">
+        <input type="submit" value="annuler" />
     </form>
     </div>
 </body>

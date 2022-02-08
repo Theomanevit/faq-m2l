@@ -13,7 +13,7 @@ table, th, td {
    
   body {
     margin-left:20px;
-    background-color: black;
+    background-color: white;
   }
    
   th,td {
@@ -39,7 +39,7 @@ table, th, td {
   border-style:groove;
   border-width: 3px;
   border-color: white;
-  color: white;
+  color: black;
 }
 
 h1{
@@ -52,10 +52,6 @@ h1{
 
 a{
   font-size : 50px;
-}
-
-.accueil{
-  color:white;
 }
 
 input,select{

@@ -7,12 +7,17 @@
     <link rel="stylesheet" href="css/accueil2.css">
 </head>
 <body>
-    <h2>Accueil</h2>
-    <form action="accueil2.php" method="post">
-        <input type="submit" value="Foire aux questions" />
-    </form>
-    <a href="#"><img src="img/personne.png" alt="compte" /></a>
-    <a href="#"><img src="img/log_out.png" alt="log_out" /></a>
+    <header>
+        <nav>
+            <a class="accueil">
+                Accueil
+            </a>
+            <a href="déconnection.php" class="droite"><img src="img/log_out.png"/></a>
+            <a href="profil_utilisateur.php" class="droite"><img src="img/personne.png"/></a>
+            <a href="questions.php" class="droite">Foire aux questions</a>
+        </nav>
+    </header> 
+    <br>
     <div>
     <h1>
         M2l

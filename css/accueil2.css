@@ -18,7 +18,7 @@ table, th, td {
    
   body {
     margin-left:20px;
-    background-color: black;
+
   }
    
   th,td {
@@ -42,6 +42,7 @@ table, th, td {
   h2{
     font-size : 50px;
     margin:auto;
+    color: white;
   }
 
   form{
@@ -62,5 +63,14 @@ h1{
   border-style:groove;
   border-width: 3px;
   border-color: white;
-  color: white;
+  color: black;
+  margin:auto;
+}
+
+a{
+  font-size : 50px;
+}
+
+img{
+  zoom: 1.75;
 }
