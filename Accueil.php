@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="css/accueil.css">
 </head>
 <body>
-    <h3>Accueil</h3>
     <form action="accueil.php" method="post">
+        <label for="accueil">Accueil</label> <br>
         <input type="submit" value="Connextion" />
         <input type="submit" value="inscription" />
     </form>
