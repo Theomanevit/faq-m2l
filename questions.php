@@ -21,7 +21,7 @@
         <tr><td><p>Réponse</p></td></tr>
 </table><a href="modif_question.php"><img src="img/edit.png" alt="edit"/></a><a href="suppr_question.php"><img src="img/trash.png" alt="trash"/></a></td>
 </table>
-
+<table></table>
 
 </body>
 </html>
