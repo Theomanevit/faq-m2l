@@ -77,6 +77,7 @@ img{
 
 .tableaucentre{
   margin: auto;
+  filter:drop-shadow(5px 5px 4px);
 }
 textarea{
   width: 450px;
