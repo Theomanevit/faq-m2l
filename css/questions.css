@@ -1,8 +1,8 @@
 @charset "utf-8";
 /* Template CSS */
-div {
+
+body{
   background-image:url(../img/fond_pro.jpg);
-  height: 900px;    
 }
 
 table, th, td {
@@ -49,6 +49,7 @@ img{
 .image{
   max-height: 50px;
   max-width: 50px;
+  filter:drop-shadow(2.5px 2.5px 3px #000000);
 }
 
 .trash{
@@ -59,6 +60,7 @@ img{
 .edit{
   max-height: 35px;
   max-width: 35px;
+  
 }
 
 .ajout{
@@ -66,6 +68,7 @@ img{
   max-height:75px;
   max-width: 75px;
   padding: 5px;
+  filter:drop-shadow(2.5px 2.5px 3px #000000);
 }
 
 .logout{
@@ -73,6 +76,7 @@ img{
   padding: 5px;
   max-height: 50px;
   max-width: 50px;
+  filter:drop-shadow(2.5px 2.5px 3px #000000);
 }
 
 .tableaucentre{
@@ -86,4 +90,5 @@ textarea{
 .boutondroite{
   float: right;
   padding: 5px;
+  filter:drop-shadow(2.5px 2.5px 3px #000000);
 }

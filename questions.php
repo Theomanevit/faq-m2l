@@ -38,7 +38,7 @@
 
     </div>
     <?php
-    /*$message="Test";
+    /*$message="Ratio on cd";
 echo '<script type="text/javascript">window.alert("'.$message.'");</script>';*/
     ?>
 </body>
