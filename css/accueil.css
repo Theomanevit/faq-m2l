@@ -37,7 +37,7 @@ table, th, td {
 .droite{
   float: right;
   border-style:groove;
-  border-width: 3px;
+  border-width: 5px;
   border-color: white;
   color: black;
 }
