@@ -20,10 +20,10 @@
                 <th>
                     <form method="post" action="traitement.php">
                         <p>
-                            <label for="question">Ecrivez ici votre question.</label><br />
+                            <label for="question">Ecrivez ici votre question :</label><br />
                             <textarea name="question" id="question"></textarea><br />
                             <input type="button" value="annuler">
-                            <input type="button" value="Valider">
+                            <a href="questions.php"> <input type="button" value="Valider"> </a>
                         </p>
                 </th>
             </tr>

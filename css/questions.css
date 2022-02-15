@@ -11,7 +11,6 @@ table, th, td {
   border-color: rgba(0, 0, 0, 0);
   border-collapse: separate;
   border-radius: 14px;
-
 }
 
 body {
@@ -82,4 +81,8 @@ img{
 textarea{
   width: 450px;
   height: 150px;
+}
+.boutondroite{
+  float: right;
+  padding: 5px;
 }
