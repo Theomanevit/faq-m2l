@@ -20,13 +20,13 @@
     <h1>M2l</h1>
     <table>
         <tr><td><form action="inscription.php" method="post">
-    <input type="text" name="pseudo" value="pseudo"/>
+    <input type="text" name="pseudo" placeholder="pseudo"/>
     </form></td></tr>
         <tr><td><form action="inscription.php" method="post">
-    <input type="text" name="adresse email" value="adresse email"/>
+    <input type="text" name="adresse email" placeholder="adresse email"/>
     </form></td></tr>
     <tr><td><form action="inscription.php" method="post">
-    <input type="text" name="mot de passe" value="mot de passe"/>
+    <input type="password" name="mot de passe" placeholder="mot de passe"/>
     </form></td></tr>
     <tr><td><form action="inscription.php" method="post">
     <select name="choix de ligue" id="ligue">
