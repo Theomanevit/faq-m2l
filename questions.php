@@ -11,10 +11,11 @@
 
 <body>
     <div>
-        <h1><a href="accueil2.php"><img class="image" src="img/home.png" alt="accueil" /></a>
+        <h1><a href="accueil2.php"class="image"><img src="img/home.png" alt="accueil" /></a>
             Foire aux questions
-            <a href="accueil.php"><img class="logout" src="img/log_out.png" alt="log_out" /></a>
-            <a href="ajout_question.php"><img class="ajout" src="img/ajout_question.png" alt="ajout_question" /></a>
+            <a href="déconnexion.php"class="droite2"><img src="img/log_out.png" alt="log_out" /></a>
+            <a href="ajout_question.php"class="droite2"><img src="img/ajout_question.png" alt="ajout_question" /></a>
+            <a href="profil_utilisateur.php"class="droite2"><img src="img/personne.png"/></a>
         </h1>
 
         <table class="tableaucentre">
@@ -36,6 +37,85 @@
         </table>
         </table>
 
+
+        <table class="tableaucentre">
+            <td element class="bord">
+                <table>
+                    <tr>
+                        <td>
+                            <p>Question</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Réponse</p>
+                        </td>
+                    </tr>
+                </table><a href="modif_question.php"><img class="edit" src="img/edit.png" alt="edit" /></a><a href="suppression_question.php"><img class="trash" src="img/trash.png" alt="trash" /></a>
+            </td>
+        </table>
+        </table>
+        </table>
+
+
+        <table class="tableaucentre">
+            <td element class="bord">
+                <table>
+                    <tr>
+                        <td>
+                            <p>Question</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Réponse</p>
+                        </td>
+                    </tr>
+                </table><a href="modif_question.php"><img class="edit" src="img/edit.png" alt="edit" /></a><a href="suppression_question.php"><img class="trash" src="img/trash.png" alt="trash" /></a>
+            </td>
+        </table>
+        </table>
+        </table>
+
+
+        <table class="tableaucentre">
+            <td element class="bord">
+                <table>
+                    <tr>
+                        <td>
+                            <p>Question</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Réponse</p>
+                        </td>
+                    </tr>
+                </table><a href="modif_question.php"><img class="edit" src="img/edit.png" alt="edit" /></a><a href="suppression_question.php"><img class="trash" src="img/trash.png" alt="trash" /></a>
+            </td>
+        </table>
+        </table>
+        </table>
+
+
+        <table class="tableaucentre">
+            <td element class="bord">
+                <table>
+                    <tr>
+                        <td>
+                            <p>Question</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Réponse</p>
+                        </td>
+                    </tr>
+                </table><a href="modif_question.php"><img class="edit" src="img/edit.png" alt="edit" /></a><a href="suppression_question.php"><img class="trash" src="img/trash.png" alt="trash" /></a>
+            </td>
+        </table>
+        </table>
+        </table>
     </div>
     <?php
     /*$message="test";
