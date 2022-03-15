@@ -39,11 +39,12 @@ table, th, td {
   border-style:solid;
   border-width: 3px;
   border-color: white;
-  color: black;
+  color: white;
   font-size: 1cm;
   border-radius: 14px;
   border-collapse: separate;
   padding:5px;
+  text-decoration: none;
 }
 
 h1{
@@ -71,5 +72,6 @@ form{
   color: black;
   font-size: 1cm;
   font-family: Verdana, Geneva, sans-serif;
+  text-decoration: none;
 }
 
