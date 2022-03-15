@@ -7,7 +7,7 @@
     <title>
         accueil
     </title>
-    <link rel="stylesheet" href="css/accueil.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <header>
