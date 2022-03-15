@@ -9,9 +9,9 @@
 </head>
 <body>
  <center><h1>profil utilisateur</h1></center>
- <nav><a href="Accueil.php"><input type="button"value="Accueil"/></a>
- <center><a href="questions.php"><input type="button"value="FAQ"/></a></center>
- <div align="right"><a href="déconnexion.php"><input type="button"value="se deconnecter"/></a></nav>
+ <center><nav><a class="boutondroite" href="accueil2.php"> <input type="button" value="accueil"> </a>
+    <a class="boutondroite" href="questions.php"><input type="button" value="FAQ"></a>
+    <a class="boutondroite" href="déconnexion.php"><input type="button" value="se déconnecter"></a></nav><center>
 <center><table>   
 <td element class="bord"><table>
 <tr>
