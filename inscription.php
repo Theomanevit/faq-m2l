@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>inscription</title>
-    <link rel="stylesheet" href="css/accueil.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <header>
@@ -40,7 +40,7 @@
     <form action="accueil2.php">
         <input type="submit" value="valider" />
     </form>
-    <form action="accueil.php">
+    <form action="index.php">
         <input type="submit" value="annuler" />
     </form>
     </div>
