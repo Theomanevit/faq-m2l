@@ -6,10 +6,9 @@ div {
 table, th, td {
     border-style: solid;
     border-width: 1px;
-    border-color: black;
+    border-color: transparent;
     border-collapse: collapse;
     margin:auto;
-    background-color: red;
   }
    
   body {
@@ -31,7 +30,7 @@ table, th, td {
   }
    
   td {
-     background-color: white;
+     background-color: transparent;
      color: black;
   }
 
