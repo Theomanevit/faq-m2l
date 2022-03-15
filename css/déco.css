@@ -6,14 +6,18 @@ img {
 
 div {
   background-image:url(../img/fond_sport_acceuil.jpg);
-  height: 900px;    
+  height: 1000px;    
 }
 
 table, th, td {
+    margin:auto;
     border-style: solid;
     border-width: 1px;
-    border-color: black;
+    border-color: transparent;
     border-collapse: collapse;
+    width: 200px; 
+	  height:130px;
+	  font-size:45px;
   }
    
   body {
@@ -37,8 +41,10 @@ table, th, td {
   td {
      background-color: white;
      color: black;
+     filter: drop-shadow(2.5px 2.5px 3px #000000);
+     border-radius: 16px;
   }
-  
+
 
 
 
@@ -58,7 +64,6 @@ h1{
   color: black;
   margin:auto;
 }
-
 
 
 img{
