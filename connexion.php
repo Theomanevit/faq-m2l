@@ -15,10 +15,10 @@
     </h1>
     <table>
         <tr><td><form action="connexion.php" method="post">
-    <input type="text" name="pseudo" value="pseudo"/>
+    <input type="text" name="pseudo" text-shadow="pseudo"/>
     </form></td></tr>
         <tr><td><form action="connexion.php" method="post">
-    <input type="text" name="mot de passe" value="mot de passe"/>
+    <input type="password" name="mot de passe" value="mot de passe"/>
     </form></td></tr>
     </table>
     <form action="index.php">
