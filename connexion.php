@@ -21,12 +21,20 @@
     <input type="password" name="mot de passe" placeholder="mot de passe"/>
     </form></td></tr>
     </table>
-    <form action="index.php">
-        <input type="submit" value="annuler" />
-    </form>
-    <form action="accueil2.php">
-        <input type="submit" value="valider" />
-    </form>
+    <table>
+            <tr>
+                <td>
+                    <form action="index.php" method="post">
+                        <input type="submit" value="annuler" />
+                    </form>
+                </td>
+                <td>
+                    <form action="accueil2.php" method="post">
+                        <input type="submit" value="valider" />
+                    </form>
+                </td>
+            </tr>
+        </table>
     </div>
 </body>
 </html>
