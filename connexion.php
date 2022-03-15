@@ -14,11 +14,11 @@
         M2l
     </h1>
     <table>
-        <tr><td><form action="connexion.php" method="post">
-    <input type="text" name="pseudo" text-shadow="pseudo"/>
+        <tr><td><form action="connexion.php" method="post" >
+    <input type="text" name="pseudo" placeholder="pseudo"/>
     </form></td></tr>
         <tr><td><form action="connexion.php" method="post">
-    <input type="password" name="mot de passe" value="mot de passe"/>
+    <input type="password" name="mot de passe" placeholder="mot de passe"/>
     </form></td></tr>
     </table>
     <form action="index.php">
