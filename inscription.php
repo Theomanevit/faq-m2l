@@ -18,12 +18,19 @@
 
     <div>
     <h1>M2l</h1>
+
     <table>
-        <tr><td><form action="inscription.php" method="post">
-    <input type="text" name="pseudo" placeholder="pseudo"/>
-    </form></td></tr>
-        <tr><td><form action="inscription.php" method="post">
-    <input type="text" name="adresse email" placeholder="adresse email"/>
+        <tr>
+            <td>
+                <form action="inscription.php" method="post">
+                    <input type="text" name="pseudo" placeholder="pseudo"/>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form action="inscription.php" method="post">
+                    <input type="text" name="adresse email" placeholder="adresse email"/>
     </form></td></tr>
     <tr><td><form action="inscription.php" method="post">
     <input type="password" name="mot de passe" placeholder="mot de passe"/>
@@ -37,12 +44,20 @@
     </select>
     </form></td></tr>
     </table>
-    <form action="accueil2.php">
-        <input type="submit" value="valider" />
-    </form>
-    <form action="index.php">
-        <input type="submit" value="annuler" />
-    </form>
+    <table>
+        <tr>
+            <td>
+            <form action="index.php" method="post">
+                <input type="submit" value="annuler" />
+            </form>
+            </td>
+            <td>
+            <form action="accueil2.php" method="post">
+                <input type="submit" value="valider" />
+            </form>
+            </td>
+        </tr>
+    </table>
     </div>
 </body>
 </html>

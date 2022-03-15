@@ -9,6 +9,7 @@ table, th, td {
     border-color: black;
     border-collapse: collapse;
     margin:auto;
+    background-color: red;
   }
    
   body {
@@ -72,7 +73,4 @@ form{
   font-size: 1cm;
   font-family: Verdana, Geneva, sans-serif;
 }
-
-
-  
 
