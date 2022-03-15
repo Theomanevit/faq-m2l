@@ -1,6 +1,6 @@
 div {
     background-image:url(../img/fond_sport_acceuil.jpg);
-    height: 900px;    
+    height: 1000px;    
 }
 
 table, th, td {
@@ -13,7 +13,7 @@ table, th, td {
    
   body {
     margin-left:20px;
-    background-color: white;
+    background-color: grey;
   }
    
   th,td {
@@ -40,6 +40,7 @@ table, th, td {
   border-width: 5px;
   border-color: white;
   color: black;
+  font-size: 1cm;
 }
 
 h1{
@@ -61,6 +62,10 @@ input,select{
 form{
   text-align: center;
   white-space: nowrap;
+}
+
+.accueil{
+  color: white;
 }
 
 
