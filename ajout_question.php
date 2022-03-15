@@ -22,8 +22,8 @@
                         <p>
                             <label for="question">Ecrivez ici votre question :</label><br />
                             <textarea name="question" id="question"></textarea><br />
-                            <a href="questions.php"> <input type="button" value="annuler">
-                            <a href="questions.php"> <input type="button" value="Valider"> </a>
+                            <p><a href="questions.php"> <input type="button" value="annuler">
+                            <a href="questions.php"> <input type="button" value="Valider"> </a></p>
                         </p>
                 </th>
             </tr>
