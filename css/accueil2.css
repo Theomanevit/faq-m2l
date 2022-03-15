@@ -63,19 +63,21 @@ h1{
   border-style:solid;
   border-width: 3px;
   border-color: white;
-  color: black;
+  color: white;
   font-size: 1cm;
   border-radius: 14px;
   border-collapse: separate;
   padding:5px;
+  text-decoration: none;
 }
 
 
 .droite2{
   float: right;
-  color: black;
+  color: white;
   font-size: 1cm;
   padding: 5px;
+  text-decoration: none;
 }
 
 a{
