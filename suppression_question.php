@@ -14,7 +14,7 @@
         <h1>
             <a href="accueil2.php"><img class="image" src="img/home.png" alt="accueil" /></a>
             Foire aux questions
-            <a href="accueil.php"><img class="logout" src="img/log_out.png" alt="log_out" /></a>
+            <a href="déconnexion.php"><img class="logout" src="img/log_out.png" alt="log_out" /></a>
         </h1>
 
         <table class="tableaucentre">
