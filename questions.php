@@ -117,10 +117,6 @@
         </table>
         </table>
     </div>
-    <?php
-    /*$message="test";
-echo '<script type="text/javascript">window.alert("'.$message.'");</script>';*/
-    ?>
 </body>
 
 </html>
