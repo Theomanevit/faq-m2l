@@ -38,7 +38,7 @@
 
     </div>
     <?php
-    /*$message="Test";
+    /*$message="test";
 echo '<script type="text/javascript">window.alert("'.$message.'");</script>';*/
     ?>
 </body>
