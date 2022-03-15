@@ -40,7 +40,7 @@
     <form action="accueil2.php">
         <input type="submit" value="valider" />
     </form>
-    <form action="accueil.php">
+    <form action="index.php">
         <input type="submit" value="annuler" />
     </form>
     </div>
