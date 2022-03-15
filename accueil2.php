@@ -12,8 +12,8 @@
             <a class="accueil">
                 Accueil
             </a>
-            <a href="déconnexion.php" class="droite"><img src="img/log_out.png"/></a>
-            <a href="profil_utilisateur.php" class="droite"><img src="img/personne.png"/></a>
+            <a href="déconnexion.php" class="droite2"><img src="img/log_out.png"/></a>
+            <a href="profil_utilisateur.php" class="droite2"><img src="img/personne.png"/></a>
             <a href="questions.php" class="droite">Foire aux questions</a>
         </nav>
     </header> 

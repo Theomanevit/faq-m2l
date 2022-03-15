@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <h2>Connexion</h2> <br>
+    <a class="accueil">Connexion</a> <br>
     <div>
     <h1>
         M2l
@@ -21,7 +21,7 @@
     <input type="text" name="mot de passe" value="mot de passe"/>
     </form></td></tr>
     </table>
-    <form action="accueil.php">
+    <form action="index.php">
         <input type="submit" value="annuler" />
     </form>
     <form action="accueil2.php">
