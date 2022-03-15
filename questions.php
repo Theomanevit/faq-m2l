@@ -18,7 +18,7 @@
             <a href="profil_utilisateur.php"class="droite2"><img src="img/personne.png"/></a>
         </h1>
 
-        <table class="tableaucentre">
+        <table class="tableauligne">
             <td element class="bord">
                 <table>
                     <tr>
@@ -38,7 +38,7 @@
         </table>
 
 
-        <table class="tableaucentre">
+        <table class="tableauligne">
             <td element class="bord">
                 <table>
                     <tr>
@@ -58,7 +58,7 @@
         </table>
 
 
-        <table class="tableaucentre">
+        <table class="tableauligne">
             <td element class="bord">
                 <table>
                     <tr>
@@ -78,7 +78,7 @@
         </table>
 
 
-        <table class="tableaucentre">
+        <table class="tableauligne">
             <td element class="bord">
                 <table>
                     <tr>
@@ -98,7 +98,7 @@
         </table>
 
 
-        <table class="tableaucentre">
+        <table class="tableauligne">
             <td element class="bord">
                 <table>
                     <tr>
