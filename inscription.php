@@ -3,10 +3,10 @@ $dsn = 'mysql:host=localhost;dbname=faq m2l';
 $user = 'root';
 $password = '';
 try {
-  $dbh = new PDO($dsn, $user, $password, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
-  $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $dbh = new PDO($dsn, $user, $password, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+    $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $ex) {
-  die("Erreur lors de la connexion SQL : " . $ex->getMessage());
+    die("Erreur lors de la connexion SQL : " . $ex->getMessage());
 }
 
 if ($submit) {
@@ -18,7 +18,7 @@ if ($submit) {
     $submit = isset($_POST['submit']);
 
     $sql = "INSERT INTO utilisateur(pseudo_uti , mail_uti , mdp_uti , id_ligue, id_type) VALUES (:pseudo_uti , :mail_uti , :mdp_uti , :id_ligue, :id_type)";
-    try{
+    try {
         $sth = $dbh->prepare($sql);
         $sth->execute(array(
             ':pseudo_uti' => $pseudo_uti,
@@ -27,10 +27,15 @@ if ($submit) {
             ':id_ligue' => $id_ligue,
             ':id_type' => $id_type
         ));
-    }catch (PDOException $ex) {
-        die("Erreur lors de la requête SQL : ".$ex->getMessage());
+    } catch (PDOException $ex) {
+        die("Erreur lors de la requête SQL : " . $ex->getMessage());
     }
-    echo "<p>".$sth->rowCount()." enregistrement(s) ajouté(s)</p>";
+    if ($sth->rowCount()) {
+        $message = "connecté !";
+        header('location: accueil.php');
+    } else {
+        $message = "Essayez encore !";
+    }
 }
 ?>
 
@@ -102,7 +107,7 @@ if ($submit) {
                     </form>
                 </td>
                 <td>
-                    <form action="accueil2.php" method="post">
+                    <form action="index.php" method="post">
                         <input type="submit" value="valider" />
                     </form>
                 </td>
