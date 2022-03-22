@@ -18,8 +18,7 @@ $id_type = isset($_POST['id_type']) ? $_POST['id_type'] : NULL;
 $submit = isset($_POST['submit']);
 
 if ($submit) {
-    $sql = "INSERT INTO utilisateur(pseudo_uti , mail_uti , mdp_uti , id_ligue, id_type)";
-    $sql. = "VALUES (:pseudo_uti , :mail_uti , :mdp_uti , :id_ligue, :id_type)";
+    $sql = "INSERT INTO utilisateur(pseudo_uti , mail_uti , mdp_uti , id_ligue, id_type) VALUES (:pseudo_uti , :mail_uti , :mdp_uti , :id_ligue, :id_type)";
     try{
         $sth = $dbh->prepare($sql);
         $sth->execute(array(
