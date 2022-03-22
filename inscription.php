@@ -5,20 +5,18 @@ $password = '';
 try {
   $dbh = new PDO($dsn, $user, $password, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
   $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  return $dbh;
 } catch (PDOException $ex) {
   die("Erreur lors de la connexion SQL : " . $ex->getMessage());
 }
 
-$pseudo_uti = isset($_POST['pseudo_uti']) ? $_POST['pseudo_uti'] : NULL;
-$mail_uti = isset($_POST['mail_uti']) ? $_POST['mail_uti'] : NULL;
-$mdp_uti = isset($_POST['mdp_uti']) ? $_POST['mdp_uti'] : NULL;
-$id_ligue = isset($_POST['id_ligue']) ? $_POST['id_ligue'] : NULL;
-$id_type = isset($_POST['id_type']) ? $_POST['id_type'] : NULL;
-$submit = isset($_POST['submit']);
-
 if ($submit) {
-    $sql = "INSERT INTO utilisateur(pseudo_uti , mail_uti , mdp_uti , id_ligue, id_type) VALUES (:pseudo_uti , :mail_uti , :mdp_uti , :id_ligue, :id_type)";
+    $pseudo_uti = isset($_POST['pseudo_uti']) ? $_POST['pseudo_uti'] : NULL;
+    $mail_uti = isset($_POST['mail_uti']) ? $_POST['mail_uti'] : NULL;
+    $mdp_uti = isset($_POST['mdp_uti']) ? $_POST['mdp_uti'] : NULL;
+    $id_ligue = isset($_POST['id_ligue']) ? $_POST['id_ligue'] : NULL;
+    $submit = isset($_POST['submit']);
+
+    $sql = "INSERT INTO utilisateur(pseudo_uti , mail_uti , mdp_uti , id_ligue) VALUES (:pseudo_uti , :mail_uti , :mdp_uti , :id_ligue)";
     try{
         $sth = $dbh->prepare($sql);
         $sth->execute(array(
@@ -30,7 +28,8 @@ if ($submit) {
         ));
     }catch (PDOException $ex) {
         die("Erreur lors de la requête SQL : ".$ex->getMessage());
-    }echo "<p>".$sth->rowCount()." enregistrement(s) ajouté(s)</p>";
+    }
+    echo "<p>".$sth->rowCount()." enregistrement(s) ajouté(s)</p>";
 }
 ?>
 
@@ -61,33 +60,34 @@ if ($submit) {
             <tr>
                 <td>
                     <form action="inscription.php" method="post">
-                        <input type="text" name="pseudo" placeholder="pseudo" />
+                        <input type="text" id="pseudo_uti" name="pseudo" placeholder="pseudo" />
                     </form>
                 </td>
             </tr>
             <tr>
                 <td>
                     <form action="inscription.php" method="post">
-                        <input type="text" name="adresse email" placeholder="adresse email" />
+                        <input type="text" id="mail_uti" name="adresse email" placeholder="adresse email" />
                     </form>
                 </td>
             </tr>
             <tr>
                 <td>
                     <form action="inscription.php" method="post">
-                        <input type="password" name="mot de passe" placeholder="mot de passe" />
+                        <input type="password" id="mdp_uti" name="mot de passe" placeholder="mot de passe" />
                     </form>
                 </td>
             </tr>
             <tr>
                 <td>
                     <form action="inscription.php" method="post" style="width:0px;">
-                        <select name="choix de ligue" id="ligue">
+                        <select name="choix de ligue" id="id_ligue">
                             <option value="">------------------------------------</option>
-                            <option value="ligue1">ligue1</option>
-                            <option value="ligue2">ligue2</option>
-                            <option value="ligue3">ligue3</option>
-                            <option value="ligue4">ligue4</option>
+                            <option value="1">ligue1</option>
+                            <option value="2">ligue2</option>
+                            <option value="3">ligue3</option>
+                            <option value="4">ligue4</option>
+                            <option value="5">ligue4</option>
                         </select>
                     </form>
                 </td>
