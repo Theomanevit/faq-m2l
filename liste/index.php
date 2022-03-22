@@ -1,6 +1,6 @@
 
 <?php
-$dsn = 'mysql:host=localhost;dbname=liste';  // contient le nom du serveur et de la base
+$dsn = 'mysql:host=localhost;dbname=faq m2l';  // contient le nom du serveur et de la base
 $user = 'root';
 $password = '';
 try {
@@ -32,7 +32,6 @@ if ($submit) {
     die("<p>Erreur lors de la requête SQL : " . $e->getMessage() . "</p>");
   }
   if ($sth->rowCount()) {
-    $message = "connecté !";
     header('location: accueil.php');
   } else {
     $message = "Essayez encore !";
