@@ -108,7 +108,7 @@ if ($submit) {
                     </form>
                 </td>
                 <td>
-                    <form action="index.php" method="post">
+                    <form action="inscription.php" method="post">
                         <input type="submit" value="valider" />
                     </form>
                 </td>
