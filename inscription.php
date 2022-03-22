@@ -9,13 +9,14 @@ try {
     die("Erreur lors de la connexion SQL : " . $ex->getMessage());
 }
 
-if ($submit) {
-    $pseudo_uti = isset($_POST['pseudo_uti']) ? $_POST['pseudo_uti'] : NULL;
+$pseudo_uti = isset($_POST['pseudo_uti']) ? $_POST['pseudo_uti'] : NULL;
     $mail_uti = isset($_POST['mail_uti']) ? $_POST['mail_uti'] : NULL;
     $mdp_uti = isset($_POST['mdp_uti']) ? $_POST['mdp_uti'] : NULL;
     $id_ligue = isset($_POST['id_ligue']) ? $_POST['id_ligue'] : NULL;
     $id_type = 1;
     $submit = isset($_POST['submit']);
+
+if ($submit) {
 
     $sql = "INSERT INTO utilisateur(pseudo_uti , mail_uti , mdp_uti , id_ligue, id_type) VALUES (:pseudo_uti , :mail_uti , :mdp_uti , :id_ligue, :id_type)";
     try {
