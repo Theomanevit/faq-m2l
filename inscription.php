@@ -31,6 +31,7 @@ if ($submit) {
     }catch (PDOException $ex) {
         die("Erreur lors de la requête SQL : ".$ex->getMessage());
     }echo "<p>".$sth->rowCount()." enregistrement(s) ajouté(s)</p>";
+}
 ?>
 
 <!DOCTYPE html>
