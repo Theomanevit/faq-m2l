@@ -59,10 +59,10 @@ if ($submit) {
     </h1>
     <table>
         <tr><td><form action="connexion.php" method="post" >
-    <input type="text" name="pseudo" placeholder="pseudo"/>
+    <input type="text" name="pseudo" id="pseudo_uti" placeholder="pseudo"/>
     </form></td></tr>
         <tr><td><form action="connexion.php" method="post">
-    <input type="password" name="mot de passe" placeholder="mot de passe"/>
+    <input type="password" id="mdp_uti" name="mot de passe" placeholder="mot de passe"/>
     </form></td></tr>
     </table>
     <table>
