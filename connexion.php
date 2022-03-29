@@ -23,7 +23,7 @@ $message = "";
 if ($submit) {
   try {
     // $sql = "select * from user where login = '$login' and password = '$password'";
-    $sql = "select pseudo_uti , mdp_uti from utilisateur where pseudo_uti = :pseudo_uti and mdp_uti = :mdp_uti";
+    $sql = "select pseudo_uti , mdp_uti , id_utilisateur from utilisateur where pseudo_uti = :pseudo_uti and mdp_uti = :mdp_uti";
     $params = array(
       "pseudo_uti" => $pseudo_uti,
       "mdp_uti" => $mdp_uti,
@@ -36,6 +36,11 @@ if ($submit) {
   }
   if ($sth->rowCount()) {
     $_SESSION["pseudo_uti"] = $pseudo_uti;
+    $rows = $sth->fetchAll(PDO::FETCH_ASSOC);
+    foreach ($rows as $row) {
+      $id_utilisateur=$row["id_utilisateur"];
+    }
+    $_SESSION["id_utilisateur"] = $id_utilisateur;
     header('location: accueil2.php');
   } else {
     $message = "Essayez encore !";

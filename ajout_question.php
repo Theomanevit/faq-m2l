@@ -1,3 +1,41 @@
+<?php
+session_start();
+
+$dsn = 'mysql:host=localhost;dbname=faq m2l';
+$user = 'root';
+$password = '';
+
+try {
+    $dbh = new PDO($dsn, $user, $password, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+    $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $ex) {
+    die("Erreur lors de la connexion SQL : " . $ex->getMessage());
+}
+$submit = isset($_POST['submit']);
+
+if ($submit) {
+    $lib_questions = isset($_POST['lib_questions']) ? $_POST['lib_questions'] : NULL;
+
+    try {
+        $sql = "INSERT INTO questions(lib_questions , id_utilisateur) VALUES (:lib_questions , :id_utilisateur )";
+        $params = array(
+            ":lib_questions" => $lib_questions,
+            ":id_utilisateur" => $_SESSION["id_utilisateur"]
+
+        );
+        $sth = $dbh->prepare($sql);
+        $sth->execute($params);
+    } catch (PDOException $ex) {
+        die("Erreur lors de la requête SQL : " . $ex->getMessage());
+    }
+    if ($sth->rowCount()) {
+        header('location: questions.php');
+    } else {
+        echo "<p> Essayez encore ! </p>";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,12 +56,12 @@
         <table class="tableaucentre">
             <tr>
                 <th>
-                    <form method="post" action="traitement.php">
+                    <form method="post" action="ajout_question.php">
                         <p>
                             <label for="question">Ecrivez ici votre question :</label><br />
-                            <textarea name="question" id="question" placeholder="question"></textarea><br />
-                            <p><a href="questions.php"> <input type="button" value="annuler">
-                            <a href="questions.php"> <input type="button" value="Valider"> </a></p>
+                            <textarea name="lib_questions" placeholder="question"></textarea><br />
+                            <p><a href="questions.php">retour
+                            <input type="submit" name="submit"><br></p>
                         </p>
                 </th>
             </tr>
