@@ -3,6 +3,7 @@
 
 body{
   background-image:url(../img/fond_pro.jpg);
+  background-attachment: fixed;
 }
 
 table, th, td {
@@ -11,6 +12,7 @@ table, th, td {
   border-color: rgba(0, 0, 0, 0);
   border-collapse: separate;
   border-radius: 14px;
+  padding: 10px;
 }
 
 body {
@@ -20,17 +22,19 @@ body {
 h1{
   font-size: 42px;
 }
+
+
 th,td {
   font-family: Verdana, Geneva, sans-serif;
   font-size : 14px;
-  width:150px;
+  width:608px;
   padding: 5px;
   text-align:center;
 }
 
 th {
-   background-color: grey;
-   color: white; 
+   background-color: lightblue;
+   color: black; 
 }
 
 td {

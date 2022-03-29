@@ -32,7 +32,8 @@ try {
     <title>Liste des questions</title>
 </head>
 
-<body>            
+<body>
+    <div>           
 <?php
   if (isset($_SESSION['pseudo_uti'])) {
     echo "<div><h1><a href='accueil2.php' class='image'><img src='img/home.png' alt='accueil' /></a>";
@@ -42,16 +43,18 @@ try {
     echo "<a href='profil_utilisateur.php' class='droite2'><img src='img/personne.png' /></a></h1>";
 
     foreach ($rows as $row) {
-      echo "<table class='tableauligne'><td element class='bord'><table><tr><td><p>".$row["id_questions"]."</p></td><td><p>".$row["id_utilisateur"]."</p></td></tr>";
+      echo "<br><table class='tableauligne'><tr><th><p>".$row["id_questions"]."</p></th><th><p>".$row["id_utilisateur"]."</p></th></tr>";
       echo "<tr><td><p>".$row["lib_questions"]."</p></td><td><p>".$row["date_questions"]."</p></td></tr>";
       echo "<tr><td><p>".$row["reponse"]."</p></td><td><p>".$row["date_reponse"]."</p></td></tr>";
-      echo "</table><a href='modif_question.php'><img class='edit' src='img/edit.png' alt='edit' /></a><a href='suppression_question.php'><img class='trash' src='img/trash.png' alt='trash' /></a></td></table></table></div>";
+      echo "</table><a href='modif_question.php'><br><img class='edit' src='img/edit.png' alt='edit' /></a><a href='suppression_question.php'><img class='trash' src='img/trash.png' alt='trash' /></a></td></table></div>";
+      
     }
   } else {
     echo '<p> Désolé mais vous ne pouvez pas accèder à cette page! </p>';
     echo 'Se <a href="connexion.php">connecter</a></p>';
   }
 ?>
+</div>
 </body>
 
 </html>
