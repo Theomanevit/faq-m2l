@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 $dsn = 'mysql:host=localhost;dbname=faq m2l';
 $user = 'root';
 $password = '';
@@ -32,6 +34,7 @@ if ($submit) {
         die("Erreur lors de la requête SQL : " . $ex->getMessage());
     }
     if ($sth->rowCount()) {
+        $_SESSION["pseudo_uti"] = $pseudo_uti;
         header('location: accueil2.php');
     } else {
         echo "<p> Essayez encore ! </p>";

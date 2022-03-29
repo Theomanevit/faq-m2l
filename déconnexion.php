@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -19,13 +22,20 @@
             <tr>
                 <td>
                     <h2>Déconnexion</h2>
-                    <h3>Voulez-vous vraiment vous déconnecter ?</h3>
+                    <?php
+                        if (isset($_SESSION['pseudo_uti'])) {
+                            $pseudo_uti = $_SESSION['pseudo_uti'];
+                            session_unset();
+                            session_destroy(); 
+                            setcookie(session_name(),'',-1,'/'); 
+                        }
+                        echo '<p>'.$pseudo_uti.', vous êtes déconnecté</p>';
+                    ?>
                 </td>
             </tr>
         </table>
         <center>
-            <a href="index.php"><input type="submit" value="oui" /></a>
-            <a href="accueil2.php"><input type="submit" value="non" /></a>
+            <a href="index.php"><input type="submit" value="accueil" /></a>
         </center>
     </div>
 </body>

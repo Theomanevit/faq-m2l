@@ -1,5 +1,8 @@
-
 <?php
+
+session_start();
+
+
 $dsn = 'mysql:host=localhost;dbname=faq m2l';  // contient le nom du serveur et de la base
 $user = 'root';
 $password = '';
@@ -20,7 +23,7 @@ $message = "";
 if ($submit) {
   try {
     // $sql = "select * from user where login = '$login' and password = '$password'";
-    $sql = "select pseudo_uti , mdp_uti from compte where pseudo_uti = :pseudo_uti and mdp_uti = :mdp_uti";
+    $sql = "select pseudo_uti , mdp_uti from utilisateur where pseudo_uti = :pseudo_uti and mdp_uti = :mdp_uti";
     $params = array(
       "pseudo_uti" => $pseudo_uti,
       "mdp_uti" => $mdp_uti,
@@ -32,7 +35,8 @@ if ($submit) {
     die("<p>Erreur lors de la requête SQL : " . $e->getMessage() . "</p>");
   }
   if ($sth->rowCount()) {
-    header('location: accueil.php');
+    $_SESSION["pseudo_uti"] = $pseudo_uti;
+    header('location: accueil2.php');
   } else {
     $message = "Essayez encore !";
   }
@@ -44,41 +48,35 @@ if ($submit) {
 
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>connextion</title>
-    <link rel="stylesheet" href="css/index.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>connextion</title>
+  <link rel="stylesheet" href="css/index.css">
 </head>
+
 <body>
-    <a class="accueil">Connexion</a> <br>
-    <div>
+  <a class="accueil">Connexion</a> <br>
+  <div>
     <h1>
-        M2l
+      M2l
     </h1>
     <table>
-        <tr><td><form action="connexion.php" method="post" >
-    <input type="text" name="pseudo" id="pseudo_uti" placeholder="pseudo"/>
-    </form></td></tr>
-        <tr><td><form action="connexion.php" method="post">
-    <input type="password" id="mdp_uti" name="mot de passe" placeholder="mot de passe"/>
-    </form></td></tr>
+      <tr>
+        <td>
+          <form action="connexion.php" method="post">
+            <p> <input type="text" name="pseudo_uti" placeholder="pseudo" /> <br> </p>
+            <p> <input type="password" name="mdp_uti" placeholder="mot de passe" /> <br> </p>
+            <p> <input type="submit" name="submit" /> </p>
+          </form>
+        </td>
+      </tr>
     </table>
     <table>
-            <tr>
-                <td>
-                    <form action="index.php" method="post">
-                        <input type="submit" value="annuler" />
-                    </form>
-                </td>
-                <td>
-                    <form action="accueil2.php" method="post">
-                        <input type="submit" value="valider" />
-                    </form>
-                </td>
-            </tr>
-        </table>
-    </div>
+    <a href="index.php">retour</a>
+  </div>
 </body>
+
 </html>
