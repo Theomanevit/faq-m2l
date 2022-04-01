@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 $dsn = 'mysql:host=localhost;dbname=faq m2l';
 $user = 'root';
 $password = '';

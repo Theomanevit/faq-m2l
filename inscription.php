@@ -20,7 +20,7 @@ if ($submit) {
     $id_ligue = isset($_POST['id_ligue']) ? $_POST['id_ligue'] : NULL;
 
     try {
-        $sql = "INSERT INTO utilisateur(mail_uti , pseudo_uti , mdp_uti , id_ligue, id_type) VALUES (:pseudo_uti , :mail_uti , :mdp_uti , :id_ligue , :id_type)";
+        $sql = "INSERT INTO utilisateur(pseudo_uti , mail_uti , mdp_uti , id_ligue, id_type) VALUES (:pseudo_uti , :mail_uti , :mdp_uti , :id_ligue , :id_type)";
         $params = array(
             ":pseudo_uti" => $pseudo_uti,
             ":mail_uti" => $mail_uti,
@@ -33,8 +33,22 @@ if ($submit) {
     } catch (PDOException $ex) {
         die("Erreur lors de la requête SQL : " . $ex->getMessage());
     }
+
+    
+    try {
+        $sql = "select id_utilisateur from utilisateur where pseudo_uti = :pseudo_uti and mdp_uti = :mdp_uti";
+        $params = array(
+          "pseudo_uti" => $pseudo_uti,
+          "mdp_uti" => $mdp_uti,
+        );
+        $sth = $dbh->prepare($sql);
+        $sth->execute($params);
+      } catch (PDOException $e) {
+        die("<p>Erreur lors de la requête SQL : " . $e->getMessage() . "</p>");
+      }
     if ($sth->rowCount()) {
         $_SESSION["pseudo_uti"] = $pseudo_uti;
+        $_SESSION["id_utilisateur"] = $id_utilisateur;
         header('location: accueil2.php');
     } else {
         echo "<p> Essayez encore ! </p>";
