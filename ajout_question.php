@@ -60,7 +60,9 @@ if ($submit) {
                         <p>
                             <label for="question">Ecrivez ici votre question :</label><br />
                             <textarea name="lib_questions" placeholder="question"></textarea><br />
-                            <p><a href="questions.php">retour
+                            <p><button>
+                                <a href="questions.php">retour
+                            </button>   
                             <input type="submit" name="submit"><br></p>
                         </p>
                 </th>

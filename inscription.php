@@ -66,19 +66,22 @@ if ($submit) {
     <div>
         <h1>M2l</h1>
         <form action="inscription.php" method="post">
-            <p> <input type="text" name="pseudo_uti" placeholder="pseudo" /><br></p>
-            <p> <input type="text" name="mail_uti" placeholder="adresse email" /><br></p>
-            <p> <input type="password" name="mdp_uti" placeholder="mot de passe" /><br></p>
-            <p> <select name="id_ligue">
+            <p> <input type="text" name="pseudo_uti" placeholder="pseudo" required /><br></p>
+            <p> <input type="text" name="mail_uti" placeholder="adresse email" required /><br></p>
+            <p> <input type="password" name="mdp_uti" placeholder="mot de passe" required /><br></p>
+            <p> <select name="id_ligue" required>
                     <option value="">------------------------------------</option>
                     <option value="2">Ligue de basket</option>
                     <option value="3">Ligue de volley</option>
                     <option value="4">Ligue de handball</option>
                     <option value="5">Ligue de football</option>
                 </select><br></p>
-            <p><input type="submit" name="submit"><br></p>
+            <p><input type="submit" name="submit" value="inscription">
+                <button>
+                    <a href="index.php">retour</a>
+                </button>
+            </p>
         </form>
-        <a href="index.php">retour</a>
     </div>
 </body>
 

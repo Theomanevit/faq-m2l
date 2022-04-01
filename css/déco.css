@@ -69,3 +69,8 @@ h1{
 img{
   zoom: 1.75;
 }
+
+a{
+  text-decoration: none;
+  color: black;
+}

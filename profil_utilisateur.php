@@ -41,7 +41,7 @@ try {
     echo "<center>";
     echo "<a href='accueil2.php' class='centre'>accueil</a>";
     echo "<a class='centre' href='questions.php'>FAQ</a>";
-    echo "<a class='centre' href='déconnexion.php'>se déconnecter</a>";
+    echo "<a class='centre' href='déco_confirmation.php'>se déconnecter</a>";
     echo "</center>";
     echo "<br>";
     foreach ($rows as $row) {

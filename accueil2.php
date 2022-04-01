@@ -20,7 +20,7 @@ session_start();
         echo "<a class='accueil'>";
         echo "Accueil";
         echo "</a>";
-        echo "<a href='déconnexion.php' class='droite2'><img src='img/log_out.png' /></a>";
+        echo "<a href='déco_confirmation.php' class='droite2'><img src='img/log_out.png' /></a>";
         echo "<a href='profil_utilisateur.php' class='droite2'><img src='img/personne.png' /></a>";
         echo "<a href='questions.php' class='droite'>Foire aux questions</a>";
         echo "</nav>";
@@ -28,8 +28,8 @@ session_start();
         echo "<br><div><h1>M2l</h1></div>";
         }
         else {
-            echo '<p> Désolé mais vous ne pouvez pas accèder à cette page! </p>';
-            echo 'Se <a href="connexion.php">connecter</a></p>';
+            echo "<p class='secret'> Désolé mais vous ne pouvez pas accèder à cette page! </p>";
+            echo "<p class='secret'> Se <a href='connexion.php' class='secret2'>connecter</a></p>";
         }
     ?>
 </body>

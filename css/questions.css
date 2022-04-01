@@ -10,8 +10,7 @@ table, th, td {
   border-style: solid;
   border-width: 1px;
   border-color: rgba(0, 0, 0, 0);
-  border-collapse: separate;
-  border-radius: 14px;
+  border-collapse: collapse;  
   padding: 10px;
 }
 
@@ -30,11 +29,14 @@ th,td {
   width:608px;
   padding: 5px;
   text-align:center;
+  border-color: black;
 }
 
 th {
    background-color: lightblue;
    color: black; 
+   border-color: black;
+   border-width: 2px;
 }
 
 td {
@@ -48,6 +50,7 @@ td {
 img{
     max-height:100px;
     max-width: 100px;
+    padding: 0 10px;
 }
 
 .image{
@@ -64,6 +67,7 @@ img{
 .edit{
   max-height: 35px;
   max-width: 35px;
+  padding-left: 1160px;
   
 }
 
@@ -107,4 +111,9 @@ textarea{
   max-height: 50px;
   max-width: 50px;
   filter:drop-shadow(2.5px 2.5px 3px #000000);
+}
+
+a{
+  color: black;
+  text-decoration: none;
 }

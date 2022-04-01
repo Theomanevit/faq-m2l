@@ -38,7 +38,7 @@ if ($submit) {
     $_SESSION["pseudo_uti"] = $pseudo_uti;
     $rows = $sth->fetchAll(PDO::FETCH_ASSOC);
     foreach ($rows as $row) {
-      $id_utilisateur=$row["id_utilisateur"];
+      $id_utilisateur = $row["id_utilisateur"];
     }
     $_SESSION["id_utilisateur"] = $id_utilisateur;
     header('location: accueil2.php');
@@ -72,15 +72,18 @@ if ($submit) {
       <tr>
         <td>
           <form action="connexion.php" method="post">
-            <p> <input type="text" name="pseudo_uti" placeholder="pseudo" /> <br> </p>
-            <p> <input type="password" name="mdp_uti" placeholder="mot de passe" /> <br> </p>
-            <p> <input type="submit" name="submit" /> </p>
+            <p> <input type="text" name="pseudo_uti" placeholder="pseudo" required /> <br> </p>
+            <p> <input type="password" name="mdp_uti" placeholder="mot de passe" required /> <br> </p>
+            <p> <input type="submit" name="submit" value="connexion"/>
+              <button>
+                <a href="index.php">retour</a>
+              </button>
+            </p>
           </form>
         </td>
       </tr>
     </table>
     <table>
-    <a href="index.php">retour</a>
   </div>
 </body>
 

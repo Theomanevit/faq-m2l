@@ -87,3 +87,15 @@ a{
 img{
   zoom: 1.75;
 }
+
+.secret{
+  font-size: 50px;
+  color: black;
+  text-align: center;
+}
+
+.secret2{
+  font-size: 50px;
+  color: blue;
+  text-align: center; 
+}
