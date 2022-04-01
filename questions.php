@@ -53,7 +53,7 @@ try {
       }
     } else {
       echo '<p> Désolé mais vous ne pouvez pas accèder à cette page! </p>';
-      echo 'Se <a href="connexion.php">connecter</a></p>';
+      echo "Se <a class='connect' href='connexion.php'>connecter</a></p>";
     }
     ?>
   </div>

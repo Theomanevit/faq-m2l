@@ -12,8 +12,7 @@ try {
   die("Erreur lors de la connexion SQL : " . $ex->getMessage());
 }
 try {
-  $sql = "select pseudo_uti, mail_uti , mdp_uti , lib_ligue from utilisateur ,ligue where utilisateur.id_ligue=ligue.id_ligue
-    and pseudo_uti = '$_SESSION[pseudo_uti]'";
+  $sql = "select pseudo_uti, mail_uti , mdp_uti , lib_ligue from utilisateur ,ligue where utilisateur.id_ligue=ligue.id_ligue and pseudo_uti = '$_SESSION[pseudo_uti]'";
   $sth = $dbh->prepare($sql);
   $sth->execute(array());
   $rows = $sth->fetchAll(PDO::FETCH_ASSOC);
@@ -52,7 +51,7 @@ try {
     }
   } else {
     echo '<p> Désolé mais vous ne pouvez pas accèder à cette page! </p>';
-    echo 'Se <a href="connexion.php">connecter</a></p>';
+    echo "Se <a class='connect' href='connexion.php'>connecter</a></p>";
   }
   ?>
 </body>

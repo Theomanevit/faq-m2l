@@ -61,3 +61,12 @@ img{
   padding:5px;
   text-decoration: none;
 }
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+.connect{
+  color:blue;
+}
