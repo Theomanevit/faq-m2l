@@ -10,23 +10,9 @@ try {
 }
 
 $id_questions = isset($_GET['id_questions']) ? $_GET['id_questions'] : '';
-$question = isset($_POST['question']) ? $_POST['question'] : '';
+$lib_questions = isset($_POST['lib_questions']) ? $_POST['lib_questions'] : '';
 $submit = isset($_POST['submit']);
 
-
-if ($submit) {
-    $sql = "update questions set lib_questions=:lib_questions where id_questions=:id_questions";
-    try {
-        $sth = $dbh->prepare($sql);
-        $sth->execute(array(
-            ':id_questions' => $id_questions
-        ));
-        $rows = $sth->fetchAll(PDO::FETCH_ASSOC);
-    } catch (PDOException $ex) {
-        die("Erreur lors de la requête SQL : " . $ex->getMessage());
-    }
-    header("location: question.php");
-}
 ?>
 
 <!DOCTYPE html>
@@ -52,31 +38,44 @@ if ($submit) {
             <table>
                 <tr>
                     <td>
+                        <?php
+                        ?>
                         <p>Ancienne question</p>
                     </td>
                     <td>
-                        <form method="post" action="traitement.php">
-                            <p>
-                                <label for="question">la question :</label><br />
-                                <?php
-                                try {
-                                    $id_questions = isset($_GET['id_questions']) ? $_GET['id_questions'] : '';
-                                    $id_questions = $_POST['id_questions'];
-                                    $sql = "select lib_questions from questions where id_questions=:id_questions";
-                                    $sth = $dbh->prepare($sql);
-                                    $sth->execute(array(
-                                        ':id_questions' => $id_questions
-                                    ));
-                                    $rows = $sth->fetchAll(PDO::FETCH_ASSOC);
-                                } catch (PDOException $ex) {
-                                    die("<p>Erreur lors de la requête SQL : " . $ex->getMessage() . "</p>");
-                                }
-                                foreach ($rows as $row) {
-                                    echo $row["lib_question"];
-                                }
-                                echo "valeur $id_questions";
-                                ?>
-                            </p>
+                        <p>la question :</p>
+                        <?php
+                        if ($submit) {
+                            $id_questions = $_POST['id_questions'];
+                            $sql = "UPDATE questions set lib_questions=:lib_questions where id_questions=:id_questions";
+                            try {
+                                $sth = $dbh->prepare($sql);
+                                $sth->execute(array(
+                                    ':lib_questions' => $lib_questions,
+                                    ':id_questions' => $id_questions
+                                ));
+                                header("location: questions.php");
+                                
+                            } catch (PDOException $ex) {
+                                die("Erreur lors de la requête SQL : " . $ex->getMessage());
+                            }
+                            header("location: questions.php");
+                        } else {
+                            try {
+                                $sql = "select lib_questions from questions where id_questions=:id_questions";
+                                $sth = $dbh->prepare($sql);
+                                $sth->execute(array(
+                                    ':id_questions' => $id_questions
+                                ));
+                                $rows = $sth->fetchAll(PDO::FETCH_ASSOC);
+                            } catch (PDOException $ex) {
+                                die("<p>Erreur lors de la requête SQL : " . $ex->getMessage() . "</p>");
+                            }
+                            foreach ($rows as $row) {
+                                echo $row["lib_questions"];
+                            }
+                        }
+                        ?>
                     </td>
                 </tr>
                 <tr>
@@ -84,17 +83,20 @@ if ($submit) {
                         <p>Nouvelle question </p>
                     </td>
                     <td>
-                        <form method="post" action="modification.php">
-                            <p>
-                                <label for="reponse">Modifiez ici votre réponse :</label><br />
-                                <textarea name="modif" name="modif"></textarea><br />
+                        <form method="post" action="modif_question.php">
+                            <p>Modifiez ici votre réponse : <br>
+                            <div><input name="id_questions" id="id_questions" type="hidden" value="<?php echo $id_questions; ?>" /></div>
+                                <textarea name="lib_questions"></textarea><br />
+                                <input type="submit" name="submit" value="Valider">
+                                <button>
+                                    <a href="questions.php">Annuler</a>
+                                </button>
                             </p>
                     </td>
                 </tr>
 
         </td>
-    </table><a class="boutondroite" href="questions.php"> <input type="button" value="Valider"> </a>
-    <a class="boutondroite" href="questions.php"><input type="button" value="Annuler"></a>
+    </table>
 
     </table>
     </table>

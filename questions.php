@@ -44,12 +44,11 @@ try {
 
       foreach ($rows as $row) {
         echo "<br><table class='tableauligne'><tr><th><p>" . $row["id_questions"] . "</p></th><th><p>" . $row["pseudo_uti"] . "</p></th></tr>";
-        echo "<tr><td><p>" . $row["lib_questions"] . "</p></td><td><p>" . $row["date_questions"] . "</p></td></tr>";
-        echo "<tr><td><p>" . $row["reponse"] . "</p></td><td><p>" . $row["date_reponse"] . "</p></td></tr>";
+        echo "<tr><td><p>" . $row["date_questions"] . "</p></td><td><p>" . $row["lib_questions"] . "</p></td></tr>";
+        echo "<tr><td><p>" . $row["date_reponse"] . "</p></td><td><p>" . $row["reponse"] . "</p></td></tr>";
         echo "</table>";
-        echo '<br><td><a href="modifier.php?id=' . $row['id_questions'] . '">Modifier</a></td>';
-        echo '<br><td><a href="supprimer.php?id=' . $row['id_questions'] . '">Supprimer</a></td>';
-        echo "<br> <a href='modif_question.php?id='" . $row['id_questions'] . "><br><img class='edit' src='img/edit.png' alt='edit' /></a><a href='suppression_question.php'><img class='trash' src='img/trash.png' alt='trash' /></a></td></table></div>";
+        echo '<td><a href="modif_question.php?id_questions=' . $row['id_questions'] . '"><img class="image" src="img/edit.png" alt="edit"></a></td>';
+        echo '<td><a href="suppression_question.php?id_questions=' . $row['id_questions'] . '"><img class="image" src="img/trash.png" alt="edit"></a><br><br></td>';
       }
     } else {
       echo '<p> Désolé mais vous ne pouvez pas accèder à cette page! </p>';
