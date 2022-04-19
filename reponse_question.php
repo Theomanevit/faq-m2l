@@ -10,7 +10,7 @@ try {
 }
 
 $id_questions = isset($_GET['id_questions']) ? $_GET['id_questions'] : '';
-$lib_questions = isset($_POST['lib_questions']) ? $_POST['lib_questions'] : '';
+$reponse = isset($_POST['reponse']) ? $_POST['reponse'] : '';
 $submit = isset($_POST['submit']);
 
 ?>
@@ -23,7 +23,7 @@ $submit = isset($_POST['submit']);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/questions.css">
-    <title>modification question</title>
+    <title>réponse question</title>
 </head>
 
 <body>
@@ -47,11 +47,11 @@ $submit = isset($_POST['submit']);
                         <?php
                         if ($submit) {
                             $id_questions = $_POST['id_questions'];
-                            $sql = "UPDATE questions set lib_questions=:lib_questions where id_questions=:id_questions";
+                            $sql = "UPDATE questions set reponse=:reponse where id_questions = :id_questions ";
                             try {
                                 $sth = $dbh->prepare($sql);
                                 $sth->execute(array(
-                                    ':lib_questions' => $lib_questions,
+                                    ':reponse' => $reponse,
                                     ':id_questions' => $id_questions
                                 ));
                                 header("location: questions.php");
@@ -84,10 +84,10 @@ $submit = isset($_POST['submit']);
                         <p>Nouvelle question </p>
                     </td>
                     <td>
-                        <form method="post" action="modif_question.php">
-                            <p>Modifiez ici votre question : <br>
+                        <form method="post" action="reponse_question.php">
+                            <p>Réponse à la question : <br>
                             <div><input name="id_questions" id="id_questions" type="hidden" value="<?php echo $id_questions; ?>" /></div>
-                                <textarea name="lib_questions"></textarea><br />
+                                <textarea name="reponse"></textarea><br />
                                 <input type="submit" name="submit" value="Valider">
                                 <button>
                                     <a href="questions.php">Annuler</a>
