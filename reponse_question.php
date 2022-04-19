@@ -47,7 +47,7 @@ $submit = isset($_POST['submit']);
                         <?php
                         if ($submit) {
                             $id_questions = $_POST['id_questions'];
-                            $sql = "UPDATE questions set reponse=:reponse where id_questions = :id_questions ";
+                            $sql = "UPDATE questions set reponse=:reponse, date_reponse=CURRENT_date()  where id_questions = :id_questions ";
                             try {
                                 $sth = $dbh->prepare($sql);
                                 $sth->execute(array(

@@ -16,7 +16,7 @@ if ($submit) {
     $lib_questions = isset($_POST['lib_questions']) ? $_POST['lib_questions'] : NULL;
 
     try {
-        $sql = "INSERT INTO questions(lib_questions , id_utilisateur) VALUES (:lib_questions , :id_utilisateur )";
+        $sql = "INSERT INTO questions(lib_questions , id_utilisateur , date_questions) VALUES (:lib_questions , :id_utilisateur , CURRENT_date())";
         $params = array(
             ":lib_questions" => $lib_questions,
             ":id_utilisateur" => $_SESSION["id_utilisateur"]
