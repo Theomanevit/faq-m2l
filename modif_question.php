@@ -84,7 +84,7 @@ $submit = isset($_POST['submit']);
                     </td>
                     <td>
                         <form method="post" action="modif_question.php">
-                            <p>Modifiez ici votre réponse : <br>
+                            <p>Modifiez ici votre question : <br>
                             <div><input name="id_questions" id="id_questions" type="hidden" value="<?php echo $id_questions; ?>" /></div>
                                 <textarea name="lib_questions"></textarea><br />
                                 <input type="submit" name="submit" value="Valider">
