@@ -49,7 +49,7 @@ if ($submit) {
     if ($sth->rowCount()) {
         $_SESSION["pseudo_uti"] = $pseudo_uti;
         $_SESSION["id_utilisateur"] = $id_utilisateur;
-        header('location: accueil2.php');
+        header('location: connexion.php');
     } else {
         echo "<p> Essayez encore ! </p>";
     }
