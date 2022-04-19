@@ -11,16 +11,8 @@ try {
 } catch (PDOException $ex) {
   die("Erreur lors de la connexion SQL : " . $ex->getMessage());
 }
-$pseudo_uti = $_SESSION['pseudo_uti'] ;
 
-try {
-  $sql = "select pseudo_uti,id_questions,lib_questions,date_questions,reponse,date_reponse from questions, utilisateur where questions.id_utilisateur=utilisateur.id_utilisateur";
-  $sth = $dbh->prepare($sql);
-  $sth->execute(array());
-  $rows = $sth->fetchAll(PDO::FETCH_ASSOC);
-} catch (PDOException $ex) {
-  die("<p>Erreur lors de la requête SQL : " . $ex->getMessage() . "</p>");
-}
+$pseudo_uti = $_SESSION['pseudo_uti'] ;
 
 try {
   $sql = "select id_type from utilisateur where pseudo_uti=:pseudo_uti";
@@ -33,6 +25,42 @@ try {
   die("<p>Erreur lors de la requête SQL : " . $ex->getMessage() . "</p>");
 }
 $id_type = $row['id_type'];
+
+try {
+  $sql = "select id_ligue from utilisateur where pseudo_uti=:pseudo_uti";
+  $sth = $dbh->prepare($sql);
+  $sth->execute(array(
+    ':pseudo_uti' => $pseudo_uti
+  ));
+  $row = $sth->fetch(PDO::FETCH_ASSOC);
+} catch (PDOException $ex) {
+  die("<p>Erreur lors de la requête SQL : " . $ex->getMessage() . "</p>");
+}
+$id_ligue = $row['id_ligue'];
+
+
+if($id_ligue == 1){
+  $sql = "select pseudo_uti,id_questions,lib_questions,date_questions,reponse,date_reponse from questions, utilisateur where questions.id_utilisateur=utilisateur.id_utilisateur";
+}
+if($id_ligue == 2){
+  $sql = "select pseudo_uti,id_questions,lib_questions,date_questions,reponse,date_reponse from questions, utilisateur where questions.id_utilisateur=utilisateur.id_utilisateur and id_ligue=2";
+}
+if($id_ligue == 3){
+  $sql = "select pseudo_uti,id_questions,lib_questions,date_questions,reponse,date_reponse from questions, utilisateur where questions.id_utilisateur=utilisateur.id_utilisateur and id_ligue=3";
+}
+if($id_ligue == 4){
+  $sql = "select pseudo_uti,id_questions,lib_questions,date_questions,reponse,date_reponse from questions, utilisateur where questions.id_utilisateur=utilisateur.id_utilisateur and id_ligue=4";
+}
+if($id_ligue == 5){
+  $sql = "select pseudo_uti,id_questions,lib_questions,date_questions,reponse,date_reponse from questions, utilisateur where questions.id_utilisateur=utilisateur.id_utilisateur and id_ligue=5";
+}
+try {
+  $sth = $dbh->prepare($sql);
+  $sth->execute(array());
+  $rows = $sth->fetchall(PDO::FETCH_ASSOC);
+} catch (PDOException $ex) {
+  die("<p>Erreur lors de la requête SQL : " . $ex->getMessage() . "</p>");
+}
 ?>
 
 <!DOCTYPE html>
@@ -62,7 +90,7 @@ $id_type = $row['id_type'];
         echo "<tr><td><p>" . $row["date_reponse"] . "</p></td><td><p>" . $row["reponse"] . "</p></td></tr>";
         echo "</table><br>";
         if ($id_type == 2 || $id_type == 3) {
-          echo '<a href="reponse_question.php?id_questions=' . $row['id_questions'] . '"><img class="image" src="img/reponse.png" alt="edit"></a>';
+          echo '<br><a href="reponse_question.php?id_questions=' . $row['id_questions'] . '"><img class="image" src="img/reponse.png" alt="edit"></a>';
           echo '<a href="modif_question.php?id_questions=' . $row['id_questions'] . '"><img class="image" src="img/edit.png" alt="edit"></a>';
           echo '<a href="suppression_question.php?id_questions=' . $row['id_questions'] . '"><img class="image" src="img/trash.png" alt="edit"></a><br><br>';
         }
