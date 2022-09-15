@@ -104,8 +104,8 @@ INSERT INTO `utilisateur` (`id_utilisateur`, `pseudo_uti`, `mail_uti`, `mdp_uti`
 (3, 'adminvolley', 'adminvolley@m2l.fr', '$2y$11$AhO7lIhLz8mybrHlnY2yQOFyZJW0CvgNFFqmkMRJKFqz51EDbmxxm', 3, 2),
 (4, 'adminhand', 'adminhand@m2l.fr', '$2y$11$RPwMJUtwiNjZMIO0GNDpheM4tXbkraj6sD.nZNpU6aj639at2UBA2', 4, 2),
 (5, 'adminbasket', 'adminbasket@m2l.fr', '$2y$11$2Cn2RBcPkeCeI4lI0hdJkOZ3J79r8afX9k/eNTXQ95WPqnoi3II6e', 2, 2),
-(6, 'userfoot3', 'userfoot3@m2l.fr', '$2y$11$qydaVjWLzc8QdlWUaYaaPelfZW9vVseVfH/DZ5uVfYy0Swb2LvPAq', 5, 1),
-(7, 'userfoot3', 'userfoot3@m2l.fr', '$2y$11$istRAoVQ47wS9vV0SccUVObs78KnUKZ0IpK72V4bGoyY10qJ1diDa', 5, 1);
+(6, 'userfoot1', 'userfoot1@m2l.fr', '$2y$11$qydaVjWLzc8QdlWUaYaaPelfZW9vVseVfH/DZ5uVfYy0Swb2LvPAq', 5, 1),
+(7, 'userfoot2', 'userfoot2@m2l.fr', '$2y$11$istRAoVQ47wS9vV0SccUVObs78KnUKZ0IpK72V4bGoyY10qJ1diDa', 5, 1);
 
 --
 -- Index pour les tables déchargées
