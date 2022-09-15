@@ -12,7 +12,7 @@ try {
   die("Erreur lors de la connexion SQL : " . $ex->getMessage());
 }
 try {
-  $sql = "select pseudo_uti, mail_uti , mdp_uti , lib_ligue from utilisateur ,ligue where utilisateur.id_ligue=ligue.id_ligue and pseudo_uti = '$_SESSION[pseudo_uti]'";
+  $sql = "select pseudo_uti, mail_uti , lib_ligue from utilisateur ,ligue where utilisateur.id_ligue=ligue.id_ligue and pseudo_uti = '$_SESSION[pseudo_uti]'";
   $sth = $dbh->prepare($sql);
   $sth->execute(array());
   $rows = $sth->fetchAll(PDO::FETCH_ASSOC);
@@ -46,7 +46,7 @@ try {
     foreach ($rows as $row) {
       echo "<table><td element class='bord'><table><tr><td>pseudo</td><td>" . $row["pseudo_uti"] . "</td></tr>";
       echo "<tr><td>adresse mail</td><td>" . $row["mail_uti"] . "</td></tr>";
-      echo "<tr><td>mot de passe</td><td>" . $row["mdp_uti"] . "</td></tr>";
+      echo "<tr><td>mot de passe</td><td>" . $_SESSION["mdp_uti"] . "</td></tr>";
       echo "<tr><td>ligue</td><td>" . $row["lib_ligue"] . "</td></tr></table>";
     }
   } else {

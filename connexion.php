@@ -51,6 +51,7 @@ if ($submit) {
     }
     if ($sth->rowCount()) {
       $_SESSION["pseudo_uti"] = $pseudo_uti;
+      $_SESSION["mdp_uti"] = $mdp_uti;
       foreach ($rows as $row) {
         $id_utilisateur = $row["id_utilisateur"];
       }
