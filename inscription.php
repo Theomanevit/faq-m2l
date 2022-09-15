@@ -18,7 +18,8 @@ if ($submit) {
     $pseudo_uti = isset($_POST['pseudo_uti']) ? $_POST['pseudo_uti'] : NULL;
     $mdp_uti = isset($_POST['mdp_uti']) ? $_POST['mdp_uti'] : NULL;
     $id_ligue = isset($_POST['id_ligue']) ? $_POST['id_ligue'] : NULL;
-    $hash = password_hash($mdp_uti, PASSWORD_BCRYPT) ;
+    $options = array('cost' => 11);
+    $hash = password_hash($mdp_uti, PASSWORD_BCRYPT,$options) ;
 
     try {
         $sql = "INSERT INTO utilisateur(pseudo_uti , mail_uti , mdp_uti , id_ligue, id_type) VALUES (:pseudo_uti , :mail_uti , :mdp_uti , :id_ligue , :id_type)";
@@ -48,9 +49,8 @@ if ($submit) {
         die("<p>Erreur lors de la requête SQL : " . $e->getMessage() . "</p>");
       }
     if ($sth->rowCount()) {
-        $_SESSION["pseudo_uti"] = $hash;
-        $_SESSION["id_utilisateur"] = $id_utilisateur;
         header('location: connexion.php');
+        Exit();
     } else {
         echo "<p> Essayez encore ! </p>";
     }

@@ -22,28 +22,43 @@ $message = "";
 // Cherche le user dans la base
 if ($submit) {
   try {
-    // $sql = "select * from user where login = '$login' and password = '$password'";
-    $sql = "select pseudo_uti , mdp_uti , id_utilisateur from utilisateur where pseudo_uti = :pseudo_uti and mdp_uti = :mdp_uti";
+    $sql = "select mdp_uti from utilisateur where pseudo_uti = :pseudo_uti";
     $params = array(
       "pseudo_uti" => $pseudo_uti,
-      "mdp_uti" => $mdp_uti,
     );
     $sth = $dbh->prepare($sql);
     $sth->execute($params);
-    //$rows = $sth->fetchAll(PDO::FETCH_ASSOC);
+    $rows = $sth->fetchAll(PDO::FETCH_ASSOC);
   } catch (PDOException $e) {
     die("<p>Erreur lors de la requête SQL : " . $e->getMessage() . "</p>");
   }
-  if ($sth->rowCount()) {
-    $_SESSION["pseudo_uti"] = $pseudo_uti;
-    $rows = $sth->fetchAll(PDO::FETCH_ASSOC);
-    foreach ($rows as $row) {
-      $id_utilisateur = $row["id_utilisateur"];
+  foreach ($rows as $row) {
+    $hash = $row["mdp_uti"];
+  }
+  if (password_verify($mdp_uti, $hash)) {
+    try {
+      // $sql = "select * from user where login = '$login' and password = '$password'";
+      $sql = "select id_utilisateur from utilisateur where pseudo_uti = :pseudo_uti and mdp_uti = :mdp_uti";
+      $params = array(
+        "pseudo_uti" => $pseudo_uti,
+        "mdp_uti" => $hash,
+      );
+      $sth = $dbh->prepare($sql);
+      $sth->execute($params);
+      $rows = $sth->fetchAll(PDO::FETCH_ASSOC);
+    } catch (PDOException $e) {
+      die("<p>Erreur lors de la requête SQL : " . $e->getMessage() . "</p>");
     }
-    $_SESSION["id_utilisateur"] = $id_utilisateur;
-    header('location: accueil2.php');
+    if ($sth->rowCount()) {
+      $_SESSION["pseudo_uti"] = $pseudo_uti;
+      foreach ($rows as $row) {
+        $id_utilisateur = $row["id_utilisateur"];
+      }
+      $_SESSION["id_utilisateur"] = $id_utilisateur;
+      header('location: accueil2.php');
+    }
   } else {
-    $message = "Essayez encore !";
+    echo 'mot de passe invalide';
   }
 }
 ?>
@@ -74,7 +89,7 @@ if ($submit) {
           <form action="connexion.php" method="post">
             <p> <input type="text" name="pseudo_uti" placeholder="pseudo" required /> <br> </p>
             <p> <input type="password" name="mdp_uti" placeholder="mot de passe" required /> <br> </p>
-            <p> <input type="submit" name="submit" value="connexion"/>
+            <p> <input type="submit" name="submit" value="connexion" />
               <button>
                 <a href="index.php">retour</a>
               </button>
