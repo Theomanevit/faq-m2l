@@ -18,13 +18,14 @@ if ($submit) {
     $pseudo_uti = isset($_POST['pseudo_uti']) ? $_POST['pseudo_uti'] : NULL;
     $mdp_uti = isset($_POST['mdp_uti']) ? $_POST['mdp_uti'] : NULL;
     $id_ligue = isset($_POST['id_ligue']) ? $_POST['id_ligue'] : NULL;
+    $hash = password_hash($mdp_uti, PASSWORD_BCRYPT) ;
 
     try {
         $sql = "INSERT INTO utilisateur(pseudo_uti , mail_uti , mdp_uti , id_ligue, id_type) VALUES (:pseudo_uti , :mail_uti , :mdp_uti , :id_ligue , :id_type)";
         $params = array(
             ":pseudo_uti" => $pseudo_uti,
             ":mail_uti" => $mail_uti,
-            ":mdp_uti" => $mdp_uti,
+            ":mdp_uti" => $hash,
             ":id_ligue" => $id_ligue,
             ":id_type" => 1
         );
@@ -34,12 +35,12 @@ if ($submit) {
         die("Erreur lors de la requête SQL : " . $ex->getMessage());
     }
 
-    
+    echo $hash;
     try {
         $sql = "select id_utilisateur from utilisateur where pseudo_uti = :pseudo_uti and mdp_uti = :mdp_uti";
         $params = array(
           "pseudo_uti" => $pseudo_uti,
-          "mdp_uti" => $mdp_uti,
+          "mdp_uti" => $hash,
         );
         $sth = $dbh->prepare($sql);
         $sth->execute($params);
@@ -47,7 +48,7 @@ if ($submit) {
         die("<p>Erreur lors de la requête SQL : " . $e->getMessage() . "</p>");
       }
     if ($sth->rowCount()) {
-        $_SESSION["pseudo_uti"] = $pseudo_uti;
+        $_SESSION["pseudo_uti"] = $hash;
         $_SESSION["id_utilisateur"] = $id_utilisateur;
         header('location: connexion.php');
     } else {
@@ -84,7 +85,7 @@ if ($submit) {
             <p> <input type="text" name="mail_uti" placeholder="adresse email" required /><br></p>
             <p> <input type="password" name="mdp_uti" placeholder="mot de passe" required /><br></p>
             <p> <select name="id_ligue" required>
-                    <option value="">------------------------------------</option>
+                    <option value="">------------LIGUES-------------</option>
                     <option value="2">Ligue de basket</option>
                     <option value="3">Ligue de volley</option>
                     <option value="4">Ligue de handball</option>

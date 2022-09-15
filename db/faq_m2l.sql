@@ -89,7 +89,7 @@ CREATE TABLE `utilisateur` (
   `id_utilisateur` int(11) NOT NULL,
   `pseudo_uti` varchar(15) NOT NULL,
   `mail_uti` varchar(40) NOT NULL,
-  `mdp_uti` varchar(30) NOT NULL,
+  `mdp_uti` varchar(255) NOT NULL,
   `id_ligue` int(11) NOT NULL,
   `id_type` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
