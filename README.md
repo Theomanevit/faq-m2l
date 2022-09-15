@@ -6,14 +6,13 @@ L'application est une foire aux questions pour la maison des ligues de Lorraine,
     utilisateur     mot de passe
 
     superadmin    superadmin
-    adminfoot     Adminfoot
+    adminfoot     adminfoot
     userfoot1     userfoot1
     userfoot2     userfoot2
     adminhand     adminhand
-    userhand1     userhand1
-    userhand2     userhand2
+    adminvolley     adminvolley
+    adminbasket     adminbasket
     adminvolley   adminvolley
-    userfoot3     userfoot3
 
 # installation 
 Décompresser le dossier faq M2L dans le répertoire "xampp\htdocs\projets" puis créer la base de données faq m2l en utf8_general_ci dans mysql puis exécuter le script sql dans le fichier "faq_m2l.sql".
