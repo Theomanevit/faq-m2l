@@ -99,7 +99,7 @@ CREATE TABLE `utilisateur` (
 --
 
 INSERT INTO `utilisateur` (`id_utilisateur`, `pseudo_uti`, `mail_uti`, `mdp_uti`, `id_ligue`, `id_type`) VALUES
-(1, 'uperadmin', 'superadmin@m2l.fr', 'superadmin', 1, 3),
+(1, 'superadmin', 'superadmin@m2l.fr', 'superadmin', 1, 3),
 (2, 'adminfoot', 'Adminfoot@m2l.fr', 'Adminfoot', 5, 2),
 (3, 'userfoot1', 'userfoot1@m2l.fr', 'userfoot1', 5, 1),
 (4, 'userfoot2', 'userfoot2@m2l.fr', 'userfoot2', 5, 1),
