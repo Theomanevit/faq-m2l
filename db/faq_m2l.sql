@@ -99,15 +99,13 @@ CREATE TABLE `utilisateur` (
 --
 
 INSERT INTO `utilisateur` (`id_utilisateur`, `pseudo_uti`, `mail_uti`, `mdp_uti`, `id_ligue`, `id_type`) VALUES
-(1, 'superadmin', 'superadmin@m2l.fr', 'superadmin', 1, 3),
-(2, 'adminfoot', 'Adminfoot@m2l.fr', 'Adminfoot', 5, 2),
-(3, 'userfoot1', 'userfoot1@m2l.fr', 'userfoot1', 5, 1),
-(4, 'userfoot2', 'userfoot2@m2l.fr', 'userfoot2', 5, 1),
-(5, 'adminhand', 'adminhand@m2l.fr', 'adminhand', 4, 2),
-(6, 'userhand1', 'userhand1@m2l.fr', 'userhand1', 4, 1),
-(7, 'userhand2', 'userhand2@m2l.fr', 'userhand2', 4, 1),
-(8, 'adminvolley', 'adminvolley@m2l.fr', 'adminvolley', 3, 2),
-(9, 'userfoot3', 'userfoot3@m2l.fr', 'userfoot3', 5, 1);
+(1, 'superadmin', 'superadmin@m2l.fr', '$2y$11$rUmTwcr5XR4wJWpUmsinwuuqu6r3IpOwb6bpMzH4zg3QXlcvmIN/e', 1, 3),
+(2, 'adminfoot', 'adminfoot@m2l.fr', '$2y$11$DPzWc/ou3xRDxh9RiRwD7uIQO0wcCJfmpk9LoNjkiISv2dBFeF7a2', 5, 2),
+(3, 'adminvolley', 'adminvolley@m2l.fr', '$2y$11$AhO7lIhLz8mybrHlnY2yQOFyZJW0CvgNFFqmkMRJKFqz51EDbmxxm', 3, 2),
+(4, 'adminhand', 'adminhand@m2l.fr', '$2y$11$RPwMJUtwiNjZMIO0GNDpheM4tXbkraj6sD.nZNpU6aj639at2UBA2', 4, 2),
+(5, 'adminbasket', 'adminbasket@m2l.fr', '$2y$11$2Cn2RBcPkeCeI4lI0hdJkOZ3J79r8afX9k/eNTXQ95WPqnoi3II6e', 2, 2),
+(6, 'userfoot3', 'userfoot3@m2l.fr', '$2y$11$qydaVjWLzc8QdlWUaYaaPelfZW9vVseVfH/DZ5uVfYy0Swb2LvPAq', 5, 1),
+(7, 'userfoot3', 'userfoot3@m2l.fr', '$2y$11$istRAoVQ47wS9vV0SccUVObs78KnUKZ0IpK72V4bGoyY10qJ1diDa', 5, 1);
 
 --
 -- Index pour les tables déchargées
