@@ -16,4 +16,4 @@ l'application une foire aux questions pour la maison des ligues de lorraine, ell
     userfoot3     userfoot3
 
 # instalation 
-décompresser le dossier faq m2L dans le repertoire xampp\htdocs\projets puis intaller la base de donné dans mysql en executant le script sql dans le fichier faq_m2l.sql
+décompresser le dossier faq m2L dans le repertoire xampp\htdocs\projets puis créer la base de donné faq m2l en utf8_general_cidans mysql puis le script sql dans le fichier faq_m2l.sql
