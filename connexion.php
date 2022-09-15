@@ -73,7 +73,7 @@ if ($submit) {
         <td>
           <form action="connexion.php" method="post">
             <p> <input type="text" name="pseudo_uti" placeholder="pseudo" required /> <br> </p>
-            <p> <input type="password" name="mdp_uti" placeholder="mot de passe" required /> <br> </p>
+            <p> <input ty0.0.pe="password" name="mdp_uti" placeholder="mot de passe" required /> <br> </p>
             <p> <input type="submit" name="submit" value="connexion"/>
               <button>
                 <a href="index.php">retour</a>
