@@ -40,7 +40,7 @@ $submit = isset($_POST['submit']);
                     <td>
                         <?php
                         ?>
-                        <p>Ancienne question</p>
+                        <p>Question</p>
                     </td>
                     <td>
                         <p>la question :</p>
@@ -81,7 +81,7 @@ $submit = isset($_POST['submit']);
                 </tr>
                 <tr>
                     <td>
-                        <p>Nouvelle question </p>
+                        <p>Réponse</p>
                     </td>
                     <td>
                         <form method="post" action="reponse_question.php">
